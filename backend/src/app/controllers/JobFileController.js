@@ -2,7 +2,6 @@ import * as Yup from 'yup';
 
 import JobFile from '../models/JobFile';
 import Job from '../models/Job';
-import File from '../models/File';
 import Share from '../models/Share';
 
 class JobFileController {

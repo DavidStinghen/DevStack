@@ -11,10 +11,10 @@ class JobFile extends Model {
 
     return this;
   }
-
+  
   static associate(models) {
-    this.belongsTo(models.Job, { foreignKey: "job_id"}, 'job');
-    this.belongsTo(models.File, { foreignKey: "file_id"}, 'file');
+    this.belongsTo(models.Job, { foreignKey: "job_id", as:'job'});
+    this.belongsTo(models.File, { foreignKey: "file_id", as: 'file'});
   }
 }
 

@@ -6,8 +6,9 @@ import File from "../app/models/File";
 import Job from "../app/models/Job";
 import JobFile from "../app/models/JobFile";
 import Share from "../app/models/Share";
+import List from "../app/models/List";
 
-const models = [User, File, Job, JobFile, Share];
+const models = [User, File, Job, JobFile, Share, List];
 
 class Database {
   constructor() {
