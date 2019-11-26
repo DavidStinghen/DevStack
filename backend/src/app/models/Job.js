@@ -6,7 +6,6 @@ class Job extends Model {
       {
         title: Sequelize.STRING,
         description: Sequelize.STRING,
-        status: Sequelize.INTEGER
       },
       {
         sequelize
@@ -17,7 +16,9 @@ class Job extends Model {
   }
 
   static associate(models) {
-    this.belongsTo(models.User, { foreignKey: "provider_id"});
+    this.belongsTo(models.User, { foreignKey: "user_id"});
+    this.belongsTo(models.List, { foreignKey: "list_id"});
+    this.hasMany(models.JobFile, { foreignKey: "job_id", as: 'job'});
   }
 }
 
