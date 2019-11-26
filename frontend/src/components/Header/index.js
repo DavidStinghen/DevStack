@@ -2,7 +2,6 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import Notifications from '../Notifications';
 import { Container, Content, Profile } from './styles';
 
 export default function Header() {
@@ -19,7 +18,6 @@ export default function Header() {
         </nav>
 
         <aside>
-          <Notifications />
           <Profile>
             <div>
               <strong>{profile.name}</strong>
